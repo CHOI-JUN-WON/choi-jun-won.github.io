@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHOI-JUN-WON MAIN PAGE</title>
+    <title>MAIN PAGE</title>
+    <link rel="icon" href="/rounded-in-photoretrica.png"/>
 </head>
 <body>
     <div class="main_page">
         <div id="main_text_first" >
             <p class="main_text">안녕하세요, 개발자 겸 UI/UX 디자이너 최준원 입니다.</p>
-            <p class="main_text">저는 저 자신의 이익보다 사용자의 경험을 우선시하는 UI/UX를 구현하는것이 목표입니다.</p>
+            <p class="main_text">저는 저 자신의 이익보다 사용자의 경험을 우선시하는 UI/UX를 구현하는것이 <br>목표입니다.</p>
         </div>
         <div id="info_text" >
             <p class="main_text">최준원 CHOI JUN WON</p>
@@ -43,15 +44,36 @@
 <script>
     let ids=['project3_info','main_text_first','info_text','project1_info','project2_info'];
     let cnt=1;
+    let mybool1=true;
+    let mybool2=true;
     document.getElementById(ids[0]).style.display='none';
     document.getElementById(ids[1]).style.display='';
     document.getElementById(ids[2]).style.display='none';
     document.getElementById(ids[3]).style.display='none';
     document.getElementById(ids[4]).style.display='none';
     window.addEventListener('wheel', (event) => {
-        cnt++;
-        document.getElementById(ids[cnt%5]).style.display='';
-        document.getElementById(ids[(cnt-1)%5]).style.display='none';
+        if(mybool2){
+            mybool2=false;
+            cnt++;
+            document.getElementById(ids[cnt%5]).style.display='';
+            document.getElementById(ids[(cnt-1)%5]).style.display='none';
+            setTimeout(function(){
+                mybool2=true;
+            },300);
+        }
+        
+    });
+    window.addEventListener('touchmove', (event) => {
+        console.log(event.touches[0].clientY);
+        if(event.touches[0].clientY>450&&mybool1){
+            mybool1=false;
+            cnt++;
+            document.getElementById(ids[cnt%5]).style.display='';
+            document.getElementById(ids[(cnt-1)%5]).style.display='none';
+            setTimeout(function(){
+                mybool1=true;
+            },300);
+        }
     });
 
 </script>
@@ -78,7 +100,6 @@
     .main_page{
         margin-left: 1vw;
         margin-top: 1vw;
-        border: solid 1px black;
         width: 98vw;
         height: 96vh;
         align-self: center;
