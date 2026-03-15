@@ -8,131 +8,215 @@
 </head>
 <body>
     <div class="main_page">
-        <div id="main_text_first" >
-            <p class="main_text">안녕하세요, 개발자 겸 UI/UX 디자이너 최준원 입니다.</p>
-            <p class="main_text">저는 사용자의 경험을 우선시하는것이 <br>목표입니다.</p>
+        <div class="top_bar">
+            <div id="list_btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1f1f1f">
+                    <path d="M177-177v-25.5h606v25.5H177Zm0-290.5V-493h606v25.5H177Zm0-290V-783h606v25.5H177Z"/>
+                </svg>
+            </div>
+            <div class="bar_div">
+                <div class="bar">
+                    <div id="process"></div>
+                </div>
+            </div>
         </div>
-        <div id="info_text" >
-            <p class="main_text">최준원 CHOI JUN WON</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg_icon"><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path><path d="M12 12l0 .01"></path><path d="M3 13a20 20 0 0 0 18 0"></path></svg>
-            <span class="sub_text" style="margin-left: 0;">팀 백야</span>
-            <br>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg_icon"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path></svg>
-            <span class="sub_text" style="margin-left: 0;">수원 영일중학교</span>
-        </div>
-        <div id="project1_info">
-            <p class="main_text">프로 젝트 목록</p>
-        </div>
-        <div id="project2_info">
-            <p class="main_text">1.TYPING ANIMATION</p>
-            <p class="sub_text">타이핑하는 효과를 만드는 자바스크립트 함수입니다.</p>
-            <p class="sub_text">이함수는 다른 타이핑 함수들과 다르게 한국어의 받침을 입력하는것을 따로 구현하여 더자연스러운 애니메이션을 구현 하였습니다. </p>
-            <div class="main_page_button" onclick='window.location.href = "/typing_animation/";' style="width: 7vw;margin-left: 3vw;color: #ffffff;text-align: center;"><p>페이지로 가기</p></div>
-        </div>
-        <div id="project3_info">
-            <p class="main_text">2. MoramAI</p>
-            <p class="sub_text">모람이라는 이름을 가진 AI와 대화하는 웹사이트 입니다.</p>
-            <p class="sub_text">이 프로젝트는 다른 AI들과 다르게, 기기 안에서만 작동하는 AI입니다. 이것은 사용자가 부담없이 AI한테 질문하고 답변할수 있게 할것입니다.</p>
-            <div class="main_page_button" onclick='window.location.href = "/MoramAI/";' style="width: 7vw;margin-left: 3vw;color: #ffffff;text-align: center;"><p>페이지로 가기</p></div>
-        </div>
-        
-        
-        
-    </div>
-    
-</body>
-<script>
-    let ids=['project3_info','main_text_first','info_text','project1_info','project2_info'];
-    let cnt=1;
-    let mybool1=true;
-    let mybool2=true;
-    document.getElementById(ids[0]).style.display='none';
-    document.getElementById(ids[1]).style.display='';
-    document.getElementById(ids[2]).style.display='none';
-    document.getElementById(ids[3]).style.display='none';
-    document.getElementById(ids[4]).style.display='none';
-    window.addEventListener('wheel', (event) => {
-        if(mybool2){
-            mybool2=false;
-            cnt++;
-            document.getElementById(ids[cnt%5]).style.display='';
-            document.getElementById(ids[(cnt-1)%5]).style.display='none';
-            setTimeout(function(){
-                mybool2=true;
-            },300);
-        }
-        
-    });
-    window.addEventListener('touchmove', (event) => {
-        console.log(event.touches[0].clientY);
-        if(event.touches[0].clientY>450&&mybool1){
-            mybool1=false;
-            cnt++;
-            document.getElementById(ids[cnt%5]).style.display='';
-            document.getElementById(ids[(cnt-1)%5]).style.display='none';
-            setTimeout(function(){
-                mybool1=true;
-            },300);
-        }
-    });
 
+        <div id="bodys">
+            <div id="1s" class="sentence1">
+                <div style="margin: auto;display: flex;flex-direction: column;">
+                    <p class="info_text">안녕하세요, 개발자 겸 UI/UX 디자이너 최준원 입니다.</p>
+                    <p class="info_text">저는 좀더 사용자가 편한방향으로 UI/UX를 개발하고 싶습니다.</p>
+                </div>
+            </div>
+
+            <div id="2s" class="sentence2">
+                <div style="margin: auto;display: flex;flex-direction: column;">
+                    <p class="info_text">최준원 CHOI JUN WON</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="svg_icon">
+                        <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+                        <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path>
+                        <path d="M12 12l0 .01"></path>
+                        <path d="M3 13a20 20 0 0 0 18 0"></path>
+                    </svg>
+                    <br>
+                    <span class="sub_text" style="margin-left: 0;">팀 백야</span>
+                    <br>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="svg_icon">
+                        <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                        <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+                    </svg>
+                    <br>
+                    <span class="sub_text" style="margin-left: 0;">수원 영일중학교</span>
+                </div>
+            </div>
+
+            <div id="3s" class="sentence3">
+                <div style="margin: auto;display: flex;flex-direction: column;">
+                    <p class="info_text">프로젝트 목록</p>
+                </div>
+            </div>
+
+            <div id="4s" class="sentence4">
+                <div style="margin: auto;display: flex;flex-direction: column;">
+                    <p class="main_text">2. MoramAI</p>
+                    <p class="sub_text">모람이라는 이름을 가진 AI와 대화하는 웹사이트 입니다.</p>
+                    <p class="sub_text">이 프로젝트는 기존 무엇이든 물어볼수있는 AI와 다르게, 온디바이스 AI라는 점입니다. 이것은 사용자가 부담없이 AI한테 고민상담을 하게 도와 줄것입니다.</p>
+                    <div class="main_page_button" onclick="window.location.href = '/MoramAI/'">
+                        <p>페이지로 가기</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+const cards = [
+  document.getElementById("1s"),
+  document.getElementById("2s"),
+  document.getElementById("3s"),
+  document.getElementById("4s")
+];
+
+const offsets = [
+  { x: 0, y: 0 },
+  { x: 20, y: 20 },
+  { x: 40, y: 40 },
+  { x: 60, y: 60 }
+];
+
+const interval = 5000;
+
+function updateCards() {
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    card.style.transition = "transform 0.5s";
+    card.style.transform = `translate(${offsets[i].x}px, ${offsets[i].y}px)`;
+    card.style.zIndex = `${cards.length - i}`;
+  }
+}
+
+function slideNext() {
+  const first = cards.shift();
+  cards.push(first);
+  updateCards();
+  setTimeout(slideNext, interval);
+}
+
+updateCards();
+setTimeout(slideNext, interval);
 </script>
+
 <style>
-    body,head{
-        
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        font-family: 'Korail';
-    }
-    .main_text{
-        font-size: 200%;
-        color: white;
-        text-align: left;
-        margin-left: 3vw;
-    }
-    .sub_text{
-        font-size: 120%;
-        color: white;
-        text-align: left;
-        margin-left: 3vw;
-    }
-    .main_page{
-        margin-left: 1vw;
-        margin-top: 1vw;
-        width: 98vw;
-        height: 96vh;
-        align-self: center;
-        border-radius: 10px;   
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        background-size : cover;
-        background-image: url("https://github.com/CHOI-JUN-WON/notes/blob/main/20250927_140337.jpg?raw=true");
-    }
-    
-    ::selection {
-        background: #ffffff;
-        color: #292929;
-    }
-    .svg_icon{
-        margin-left: 3vw;
-        color: #ffffff;
-    }
-    .main_page_button{
-        
-        border: solid rgb(255, 255, 255) 1px;
-        margin: 0;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        border-radius: 10px;
-    }
-    @font-face {
-        font-family: 'Korail';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-Korail@1.0/KorailB.woff2') format('woff2');
-        font-weight: 600;
-        font-display: swap;
-    }
-    
+body {
+    margin: 0;
+    font-family: 'Korail';
+    color: white;
+}
+
+.main_page {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    background-size: cover;
+    background-image: url('https://raw.githubusercontent.com/CHOI-JUN-WON/notes/refs/heads/main/20250927_140337.jpg');
+}
+
+.top_bar {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+}
+
+#list_btn {
+    margin-top: 2vh;
+    margin-left: 20vh;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 15px;
+    backdrop-filter: blur(30px);
+    outline: solid black 1px;
+}
+
+.bar_div {
+    width: 30vh;
+    height: 5vh;
+    margin-top: 2vh;
+    border-radius: 15px;
+    display: flex;
+    margin-left: 65vh;
+    backdrop-filter: blur(30px);
+    outline: solid black 1px;
+}
+
+.bar {
+    width: 25vh;
+    margin: auto;
+    height: 2.5vh;
+    border-radius: 15px;
+    display: flex;
+    backdrop-filter: blur(30px);
+    outline: solid black 1px;
+    overflow: hidden;
+}
+
+#process {
+    width: 0vh;
+    height: 2.5vh;
+    border-radius: 15px;
+    display: flex;
+    background-color: rgba(201, 255, 131, 0.836);
+    backdrop-filter: blur(30px);
+    outline: solid black 1px;
+    animation: load 5s ease-in-out infinite;
+}
+
+#bodys {
+    position: relative;
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sentence1, .sentence2, .sentence3, .sentence4 {
+    position: absolute;
+    margin: auto;
+    width: 60vw;
+    height: 70vh;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    outline: solid black 1px;
+    transition: all 0.5s;
+}
+
+.sentence2 { backdrop-filter: blur(20px); }
+.sentence4 { backdrop-filter: blur(10px); }
+
+.info_text {
+    font-size: 150%;
+}
+
+@font-face {
+    font-family: 'Korail';
+    src: url(https://cdn.jsdelivr.net/gh/projectnoonnu/2511-Korail@1.0/KorailB.woff2) format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@keyframes load {
+    0% { width: 0; }
+    100% { width: 25vh; }
+}
 </style>
 </html>
