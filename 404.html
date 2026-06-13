@@ -1,78 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/rounded-in-photoretrica.png"/>
-    <title>404 NOT FOUND</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #111;
+      background: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wrap { text-align: left; }
+    .code {
+      font-size: 11px;
+      font-weight: 400;
+      color: #aaa;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 28px;
+    }
+    a {
+      font-size: 13px;
+      color: #888;
+      text-decoration: none;
+    }
+    a:hover { color: #111; }
+  </style>
 </head>
 <body>
-    <div class="main_page">
-        <p class="main_page_404">404</p>
-        <p class="main_page_text">NOT FOUND</p>
-        <p class="main_page_text">현제 페이지를 찾을수없습니다. 메인 페이지로 가시겠습니까?</p>
-        <div class="main_page_button" onclick='window.location.href = "/";'>
-            <p>메인 페이지로 가기</p>
-        </div>
-    </div>
+  <div class="wrap">
+    <div class="code">404</div>
+    <h1>페이지를 찾을 수 없습니다.</h1>
+    <p>주소가 잘못되었거나 삭제된 페이지입니다.</p>
+    <a href="/">← 홈으로</a>
+  </div>
 </body>
-<style>
-    body,head{
-        
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        font-family: 'Korail';
-    }
-    p{
-        color: white;
-    }
-    .main_page{
-
-        background-size : cover;
-        margin-left: 1vw;
-        margin-top: 1vw;
-        width: 98vw;
-        height: 96vh;
-        align-items: center;
-        align-self: center;
-        border-radius: 10px;
-        align-items: center;    
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        background-image: url("https://github.com/CHOI-JUN-WON/notes/blob/main/20250927_140337.jpg?raw=true");
-    }
-    .main_page_404,.main_page_text{
-        width: 98vw;
-    }
-    .main_page_404{
-        margin: 0;
-        text-align: center;
-        font-size: 500%;
-    }
-    .main_page_text{
-        text-align: center;
-        font-size: 125%;
-    }
-    .main_page_button{
-        
-        border: solid rgb(255, 255, 255) 1px;
-        margin: 0;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        border-radius: 10px;
-    }
-    ::selection {
-        background: #ffffff;
-        color: #292929;
-    }
-    @font-face {
-        font-family: 'Korail';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-Korail@1.0/KorailB.woff2') format('woff2');
-        font-weight: 600;
-        font-display: swap;
-    }
-    
-</style>
 </html>
