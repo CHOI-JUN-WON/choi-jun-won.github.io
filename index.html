@@ -1,64 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHOI-JUN-WON MAIN PAGE</title>
-    <title>MAIN PAGE</title>
-    <link rel="icon" href="/rounded-in-photoretrica.png"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #111;
+      background: #fff;
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+    a { color: #111; }
+    a:hover { color: #888; }
+
+    header { margin-bottom: 60px; }
+    header h1 { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+    header p { color: #888; font-size: 13px; }
+
+    section { margin-bottom: 48px; }
+    h2 {
+      font-size: 11px;
+      font-weight: 400;
+      color: #aaa;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    p { color: #444; font-size: 14px; line-height: 1.8; }
+    .stack { color: #888; font-size: 13px; margin-top: 12px; }
+
+    ul { list-style: none; }
+    ul li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 13px;
+    }
+    ul li:first-child { border-top: 1px solid #f0f0f0; }
+    .item-left { display: flex; flex-direction: column; }
+    .sub { color: #888; font-size: 12px; margin-top: 2px; }
+    .meta { color: #aaa; white-space: nowrap; font-size: 12px; }
+
+    .links { display: flex; gap: 20px; }
+    .links a { font-size: 13px; color: #888; text-decoration: none; }
+    .links a:hover { color: #111; }
+  </style>
 </head>
 <body>
-<div class="main_page">
-<div id="main_text_first" >
-<p class="main_text">안녕하세요, 개발자 겸 UI/UX 디자이너 최준원 입니다.</p>
-            <p class="main_text">저는 저 자신의 이익보다 사용자의 경험을 우선시하는 UI/UX를 구현하는것이 목표입니다.</p>
-            <p class="main_text">저는 저 자신의 이익보다 사용자의 경험을 우선시하는 UI/UX를 구현하는것이 <br>목표입니다.</p>
-</div>
-<div id="info_text" >
-<p class="main_text">최준원 CHOI JUN WON</p>
-@@ -43,15 +44,36 @@
-<script>
-let ids=['project3_info','main_text_first','info_text','project1_info','project2_info'];
-let cnt=1;
-    let mybool1=true;
-    let mybool2=true;
-document.getElementById(ids[0]).style.display='none';
-document.getElementById(ids[1]).style.display='';
-document.getElementById(ids[2]).style.display='none';
-document.getElementById(ids[3]).style.display='none';
-document.getElementById(ids[4]).style.display='none';
-window.addEventListener('wheel', (event) => {
-        cnt++;
-        document.getElementById(ids[cnt%5]).style.display='';
-        document.getElementById(ids[(cnt-1)%5]).style.display='none';
-        if(mybool2){
-            mybool2=false;
-            cnt++;
-            document.getElementById(ids[cnt%5]).style.display='';
-            document.getElementById(ids[(cnt-1)%5]).style.display='none';
-            setTimeout(function(){
-                mybool2=true;
-            },300);
-        }
-        
-    });
-    window.addEventListener('touchmove', (event) => {
-        console.log(event.touches[0].clientY);
-        if(event.touches[0].clientY>450&&mybool1){
-            mybool1=false;
-            cnt++;
-            document.getElementById(ids[cnt%5]).style.display='';
-            document.getElementById(ids[(cnt-1)%5]).style.display='none';
-            setTimeout(function(){
-                mybool1=true;
-            },300);
-        }
-});
 
-</script>
-@@ -78,7 +100,6 @@
-.main_page{
-margin-left: 1vw;
-margin-top: 1vw;
-        border: solid 1px black;
-width: 98vw;
-height: 96vh;
-align-self: center;
+  <header>
+    <h1>Your Name</h1>
+    <p>C++ · AI Optimization · macOS · 지역명</p>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>안녕하세요. 최준원입니다. 저는 C++라는 언어를 통해 AI를 최적화 및 개발하고 있습니다.</p>
+    
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <ul>
+      <li>
+        <div class="item-left">
+          <span>수원 영일중학교</span>
+        </div>
+        <span class="meta">2026 - </span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Teams</h2>
+    <ul>
+      
+      <li>
+        <div class="item-left">
+          <span>Solved Bits</span>
+          <span class="sub">개발자 / AI 연구원</span>
+        </div>
+        <span class="meta">2026 - </span>
+      </li>
+        <li>
+        <div class="item-left">
+          <span>팀 백야</span>
+          <span class="sub">리더 / 프론트엔드 및 백엔드 작성</span>
+        </div>
+        <span class="meta">2025 ~2026</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <div class="item-left">
+          <a href="https://github.com/CHOI-JUN-WON/typing_animation">Typing Animation</a>
+          <span class="sub">타이핑하는 효과를 낼수있는 애니메이션 클레스입니다.</span>
+        </div>
+        <span class="meta">2026</span>
+      </li>
+      <li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="links">
+      <a href="mailto:your@email.com">Email</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+</body>
+</html>
